@@ -234,8 +234,40 @@ class Person:
         self.age += 1
 
 
+# 9 Strings
+# 9.1 sWAP cASE
+def swap_case(s):
+    s_1 = s.swapcase()
+    return s_1
 
-# Let's Review
+# 9.2 String Split and Join
+def split_and_join(line):
+    line_split = line.split()
+    line_join = "-".join(line_split)
+    return line_join
+
+# 9.3 What's Your Name?
+def print_full_name(a, b):
+    print("Hello {} {}! You just delved into python." .format(a, b))
+
+# 9.4 Mutations
+def mutate_string(string, position, character):
+    return string[:position] + character + string[position + 1:]
+
+# 9.5 Find a string
+def count_substring(string, sub_string):
+    counter,sum = 0,0
+    for _ in range(0, len(string)):
+        if matcher(string[counter:(len(sub_string)+counter)], sub_string):
+            sum += 1
+        counter += 1
+    return sum
+
+def matcher(sliced_str, sub_string):
+    return sliced_str == sub_string
+
+
+# 10 Let's Review
 for i in range(int(input())):
     s = input()
     print(s[::2], s[1::2])
